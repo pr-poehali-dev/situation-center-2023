@@ -44,19 +44,19 @@
     --sidebar-ring: 43 74% 58%;
 
     /* Custom design tokens */
-    --gov-navy: #0d1421;
-    --gov-dark: #111827;
-    --gov-panel: #161f2e;
-    --gov-card: #1a2438;
-    --gov-border: #243048;
-    --gov-gold: #c9a84c;
-    --gov-gold-light: #e8c97a;
+    --gov-navy: #f0f3f8;
+    --gov-dark: #e4e9f2;
+    --gov-panel: #ffffff;
+    --gov-card: #f7f9fc;
+    --gov-border: #d1d9e6;
+    --gov-gold: #1a56a0;
+    --gov-gold-light: #2563eb;
     --gov-blue: #2563eb;
     --gov-blue-light: #3b82f6;
     --gov-green: #16a34a;
     --gov-red: #dc2626;
-    --gov-text: #e2e8f0;
-    --gov-muted: #6b7fa3;
+    --gov-text: #0f172a;
+    --gov-muted: #64748b;
   }
 }
 
@@ -77,7 +77,7 @@
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--gov-navy);
+    background: var(--gov-dark);
   }
   ::-webkit-scrollbar-thumb {
     background: var(--gov-border);
@@ -114,13 +114,13 @@
   }
 
   .status-ok {
-    color: #4ade80;
+    color: #16a34a;
   }
   .status-warn {
-    color: #facc15;
+    color: #d97706;
   }
   .status-err {
-    color: #f87171;
+    color: #dc2626;
   }
 
   .animate-fade-in {

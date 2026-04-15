@@ -10,7 +10,7 @@ const programs = [
     id: "mortgage",
     name: "Льготная ипотека",
     icon: "Home",
-    color: "#60a5fa",
+    color: "#2563eb",
     metrics: [
       { label: "Выдано кредитов", value: "7 735", unit: "шт.", change: "+15.2%" },
       { label: "Общая сумма", value: "48.4 млрд", unit: "руб.", change: "+18.7%" },
@@ -67,8 +67,8 @@ const quarterData = [
 ];
 
 const pieData = [
-  { name: "Льготная ипотека", value: 54, color: "#60a5fa" },
-  { name: "Молодые семьи", value: 25, color: "#4ade80" },
+  { name: "Льготная ипотека", value: 54, color: "#2563eb" },
+  { name: "Молодые семьи", value: 25, color: "#16a34a" },
   { name: "Многодетные", value: 14, color: "#a78bfa" },
   { name: "Сироты", value: 7, color: "#f472b6" },
 ];
@@ -153,8 +153,8 @@ export default function Statistics() {
               <YAxis tick={{ fill: "var(--gov-muted)", fontSize: 10 }} axisLine={false} tickLine={false} />
               <Tooltip contentStyle={{ background: "var(--gov-card)", border: "1px solid var(--gov-border)", borderRadius: "2px", color: "var(--gov-text)", fontSize: "11px" }} cursor={{ fill: "var(--gov-border)", opacity: 0.3 }} />
               <Legend iconType="square" iconSize={8} wrapperStyle={{ fontSize: "10px", color: "var(--gov-muted)" }} />
-              <Bar dataKey="ипотека" stackId="a" fill="#60a5fa" />
-              <Bar dataKey="молодые" stackId="a" fill="#4ade80" />
+              <Bar dataKey="ипотека" stackId="a" fill="#2563eb" />
+              <Bar dataKey="молодые" stackId="a" fill="#16a34a" />
               <Bar dataKey="многодетные" stackId="a" fill="#a78bfa" />
               <Bar dataKey="сироты" stackId="a" fill="#f472b6" radius={[2, 2, 0, 0]} />
             </BarChart>

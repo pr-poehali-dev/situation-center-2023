@@ -17,16 +17,16 @@ const allAppeals = [
 ];
 
 const statusConfig = {
-  new: { label: "Новое", color: "#60a5fa", bg: "#60a5fa20" },
-  progress: { label: "В работе", color: "#facc15", bg: "#facc1520" },
-  done: { label: "Выполнено", color: "#4ade80", bg: "#4ade8020" },
-  overdue: { label: "Просрочено", color: "#f87171", bg: "#f8717120" },
+  new: { label: "Новое", color: "#2563eb", bg: "#2563eb15" },
+  progress: { label: "В работе", color: "#d97706", bg: "#d9770615" },
+  done: { label: "Выполнено", color: "#16a34a", bg: "#16a34a15" },
+  overdue: { label: "Просрочено", color: "#dc2626", bg: "#dc262615" },
 };
 
 const priorityConfig = {
   normal: { label: "Обычный", color: "var(--gov-muted)" },
-  high: { label: "Высокий", color: "#facc15" },
-  critical: { label: "Критический", color: "#f87171" },
+  high: { label: "Высокий", color: "#d97706" },
+  critical: { label: "Критический", color: "#dc2626" },
 };
 
 const categories = ["Все категории", "Льготная ипотека", "Жильё для сирот", "Молодые семьи", "Многодетные семьи", "Ветхое жильё", "Аварийное жильё"];
@@ -34,9 +34,9 @@ const statuses = ["Все статусы", "Новое", "В работе", "В�
 
 const summaryStats = [
   { label: "Всего обращений", value: "2 847", color: "var(--gov-gold)", icon: "FileText" },
-  { label: "В работе", value: "1 203", color: "#60a5fa", icon: "Clock" },
-  { label: "Выполнено", value: "1 401", color: "#4ade80", icon: "CheckCircle" },
-  { label: "Просрочено", value: "243", color: "#f87171", icon: "AlertCircle" },
+  { label: "В работе", value: "1 203", color: "#2563eb", icon: "Clock" },
+  { label: "Выполнено", value: "1 401", color: "#16a34a", icon: "CheckCircle" },
+  { label: "Просрочено", value: "243", color: "#dc2626", icon: "AlertCircle" },
 ];
 
 export default function Appeals() {
@@ -132,7 +132,7 @@ export default function Appeals() {
                     <td className="px-4 py-3 text-xs" style={{ color: "var(--gov-muted)", maxWidth: "160px" }}><span className="truncate block">{a.operator}</span></td>
                     <td className="px-4 py-3 text-xs" style={{ color: "var(--gov-text)" }}>{a.category}</td>
                     <td className="px-4 py-3 text-xs" style={{ color: "var(--gov-text)" }}>{a.applicant}</td>
-                    <td className="px-4 py-3 text-xs font-mono-gov text-center" style={{ color: a.days > 14 ? "#f87171" : "var(--gov-text)" }}>{a.days}</td>
+                    <td className="px-4 py-3 text-xs font-mono-gov text-center" style={{ color: a.days > 14 ? "#dc2626" : "var(--gov-text)" }}>{a.days}</td>
                     <td className="px-4 py-3 text-xs" style={{ color: pc.color }}>{pc.label}</td>
                     <td className="px-4 py-3">
                       <span className="text-xs px-2 py-0.5 whitespace-nowrap" style={{ background: sc.bg, color: sc.color, borderRadius: "2px" }}>

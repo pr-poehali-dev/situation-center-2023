@@ -3,9 +3,9 @@ import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, R
 
 const kpiData = [
   { label: "Введено жилья", value: "847 320", unit: "м²", change: "+12.4%", trend: "up", color: "var(--gov-gold)", icon: "Building2" },
-  { label: "Семей улучшили жильё", value: "14 230", unit: "семей", change: "+8.1%", trend: "up", color: "#4ade80", icon: "Users" },
-  { label: "Обращений в работе", value: "2 847", unit: "шт.", change: "-5.3%", trend: "down", color: "#60a5fa", icon: "MessageSquare" },
-  { label: "Нарушений сроков", value: "34", unit: "шт.", change: "+2", trend: "up-bad", color: "#f87171", icon: "AlertTriangle" },
+  { label: "Семей улучшили жильё", value: "14 230", unit: "семей", change: "+8.1%", trend: "up", color: "#16a34a", icon: "Users" },
+  { label: "Обращений в работе", value: "2 847", unit: "шт.", change: "-5.3%", trend: "down", color: "#2563eb", icon: "MessageSquare" },
+  { label: "Нарушений сроков", value: "34", unit: "шт.", change: "+2", trend: "up-bad", color: "#dc2626", icon: "AlertTriangle" },
 ];
 
 const programs = [
@@ -40,7 +40,7 @@ const operators = [
   { region: "Восточный р-н", operator: "ООО «ТехСтрой»", appeals: 321, done: 298, status: "ok" },
 ];
 
-const statusColor = { ok: "#4ade80", warn: "#facc15", err: "#f87171" };
+const statusColor = { ok: "#16a34a", warn: "#d97706", err: "#dc2626" };
 const statusLabel = { ok: "В норме", warn: "Внимание", err: "Отклонение" };
 
 export default function Dashboard() {
@@ -58,7 +58,7 @@ export default function Dashboard() {
                 </div>
                 <span
                   className="text-xs font-mono-gov"
-                  style={{ color: kpi.trend === "up-bad" ? "#f87171" : kpi.trend === "up" ? "#4ade80" : "#facc15" }}
+                  style={{ color: kpi.trend === "up-bad" ? "#dc2626" : kpi.trend === "up" ? "#16a34a" : "#d97706" }}
                 >
                   {kpi.change}
                 </span>

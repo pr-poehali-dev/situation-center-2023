@@ -59,9 +59,9 @@ const objects = [
 ];
 
 const statusCfg = {
-  done: { label: "Введён", color: "#4ade80" },
-  progress: { label: "Строится", color: "#facc15" },
-  overdue: { label: "Отставание", color: "#f87171" },
+  done: { label: "Введён", color: "#16a34a" },
+  progress: { label: "Строится", color: "#d97706" },
+  overdue: { label: "Отставание", color: "#dc2626" },
 };
 
 export default function HousingPlan() {
@@ -78,8 +78,8 @@ export default function HousingPlan() {
         {[
           { label: "Плановый ввод 2024", value: `${totalPlan.toFixed(0)} тыс. м²`, icon: "Target", color: "var(--gov-muted)" },
           { label: "Фактический ввод", value: `${totalFact.toFixed(0)} тыс. м²`, icon: "TrendingUp", color: "var(--gov-gold)" },
-          { label: "Выполнение плана", value: `${pct}%`, icon: "Percent", color: pct >= 90 ? "#4ade80" : pct >= 75 ? "#facc15" : "#f87171" },
-          { label: "Объектов введено", value: "61 из 71", icon: "Building", color: "#60a5fa" },
+          { label: "Выполнение плана", value: `${pct}%`, icon: "Percent", color: pct >= 90 ? "#16a34a" : pct >= 75 ? "#d97706" : "#dc2626" },
+          { label: "Объектов введено", value: "61 из 71", icon: "Building", color: "#2563eb" },
         ].map((s) => (
           <div key={s.label} className="gov-card p-4 flex items-center gap-3" style={{ borderTop: `2px solid ${s.color}` }}>
             <Icon name={s.icon} size={20} style={{ color: s.color }} />
@@ -162,7 +162,7 @@ export default function HousingPlan() {
           <div className="p-4 space-y-3">
             {districts.map((d) => {
               const pct = Math.round((d.fact / d.plan) * 100);
-              const color = pct >= 90 ? "#4ade80" : pct >= 75 ? "#facc15" : "#f87171";
+              const color = pct >= 90 ? "#16a34a" : pct >= 75 ? "#d97706" : "#dc2626";
               return (
                 <div key={d.name}>
                   <div className="flex items-center justify-between mb-1">
